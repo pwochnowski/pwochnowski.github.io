@@ -4,72 +4,16 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-@font-face {
-  font-family: 'DINPro';
-  src: url("../fonts/din/webfont/DINPro-Light.eot#"), url("../fonts/din/webfont/DINPro-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/din/webfont/DINPro-Light.woff") format("woff"), url("../fonts/din/webfont/DINPro-Light.ttf") format("truetype"), url("../fonts/din/webfont/DINPro-Light.oft") format("opentype"), url("../fonts/din/webfont/DINPro-Light.svg") format("svg");
-  font-weight: 100;
-  font-style: normal; }
-@font-face {
-  font-family: 'DINPro';
-  src: url("../fonts/din/webfont/DINPro-LightItalic.eot#"), url("../fonts/din/webfont/DINPro-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/din/webfont/DINPro-LightItalic.woff") format("woff"), url("../fonts/din/webfont/DINPro-LightItalic.ttf") format("truetype"), url("../fonts/din/webfont/DINPro-LightItalic.oft") format("opentype"), url("../fonts/din/webfont/DINPro-LightItalic.svg") format("svg");
-  font-weight: 100;
-  font-style: italic; }
-@font-face {
-  font-family: 'DINPro';
-  src: url("../fonts/din/webfont/DINPro.eot#"), url("../fonts/din/webfont/DINPro.eot?#iefix") format("embedded-opentype"), url("../fonts/din/webfont/DINPro.woff") format("woff"), url("../fonts/din/webfont/DINPro.ttf") format("truetype"), url("../fonts/din/webfont/DINPro.oft") format("opentype"), url("../fonts/din/webfont/DINPro.svg") format("svg");
-  font-weight: 300;
-  font-style: normal; }
-@font-face {
-  font-family: 'DINPro';
-  src: url("../fonts/din/webfont/DINPro-Italic.eot#"), url("../fonts/din/webfont/DINPro-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/din/webfont/DINPro-Italic.woff") format("woff"), url("../fonts/din/webfont/DINPro-Italic.ttf") format("truetype"), url("../fonts/din/webfont/DINPro-Italic.oft") format("opentype"), url("../fonts/din/webfont/DINPro-Italic.svg") format("svg");
-  font-weight: 300;
-  font-style: italic; }
-@font-face {
-  font-family: 'DINPro';
-  src: url("../fonts/din/webfont/DINPro-Medium.eot#"), url("../fonts/din/webfont/DINPro-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/din/webfont/DINPro-Medium.woff") format("woff"), url("../fonts/din/webfont/DINPro-Medium.ttf") format("truetype"), url("../fonts/din/webfont/DINPro-Medium.oft") format("opentype"), url("../fonts/din/webfont/DINPro-Medium.svg") format("svg");
-  font-weight: 500;
-  font-style: normal; }
-@font-face {
-  font-family: 'DINPro';
-  src: url("../fonts/din/webfont/DINPro-MediumItalic.eot#"), url("../fonts/din/webfont/DINPro-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/din/webfont/DINPro-MediumItalic.woff") format("woff"), url("../fonts/din/webfont/DINPro-MediumItalic.ttf") format("truetype"), url("../fonts/din/webfont/DINPro-MediumItalic.oft") format("opentype"), url("../fonts/din/webfont/DINPro-MediumItalic.svg") format("svg");
-  font-weight: 500;
-  font-style: italic; }
-@font-face {
-  font-family: 'DINPro';
-  src: url("../fonts/din/webfont/DINPro-Bold.eot#"), url("../fonts/din/webfont/DINPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/din/webfont/DINPro-Bold.woff") format("woff"), url("../fonts/din/webfont/DINPro-Bold.ttf") format("truetype"), url("../fonts/din/webfont/DINPro-Bold.oft") format("opentype"), url("../fonts/din/webfont/DINPro-Bold.svg") format("svg");
-  font-weight: 700;
-  font-style: normal; }
-@font-face {
-  font-family: 'DINPro';
-  src: url("../fonts/din/webfont/DINPro-BoldItalic.eot#"), url("../fonts/din/webfont/DINPro-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/din/webfont/DINPro-BoldItalic.woff") format("woff"), url("../fonts/din/webfont/DINPro-BoldItalic.ttf") format("truetype"), url("../fonts/din/webfont/DINPro-BoldItalic.oft") format("opentype"), url("../fonts/din/webfont/DINPro-BoldItalic.svg") format("svg");
-  font-weight: 700;
-  font-style: italic; }
-@font-face {
-  font-family: 'Grandesign';
-  src: url("../fonts/grandesign/webfont/Grandesign-Neue-Serif.eot#"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif.eot?#iefix") format("embedded-opentype"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif.woff") format("woff"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif.woff2") format("woff2"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif.ttf") format("truetype"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif.svg") format("svg");
-  font-weight: 300;
-  font-style: normal; }
-@font-face {
-  font-family: 'Grandesign';
-  src: url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-italic.eot#"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-italic.woff") format("woff"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-italic.woff2") format("woff2"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-italic.ttf") format("truetype"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-italic.svg") format("svg");
-  font-weight: 300;
-  font-style: italic; }
-@font-face {
-  font-family: 'Grandesign';
-  src: url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-bold.eot#"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-bold.woff") format("woff"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-bold.woff2") format("woff2"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-bold.ttf") format("truetype"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-bold.svg") format("svg");
-  font-weight: 700;
-  font-style: normal; }
-@font-face {
-  font-family: 'Grandesign';
-  src: url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-bold_italic.eot#"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-bold_italic.eot?#iefix") format("embedded-opentype"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-bold_italic.woff") format("woff"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-bold_italic.woff2") format("woff2"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-bold_italic.ttf") format("truetype"), url("../fonts/grandesign/webfont/Grandesign-Neue-Serif-bold_italic.svg") format("svg");
-  font-weight: 700;
-  font-style: italic; }
 * {
   box-sizing: border-box !important; }
 
 html, body {
   height: 100%;
   width: 100%; }
+
+.text-center {
+    text-align: center;
+}
 
 html {
   font-size: 62.5%; }
@@ -199,12 +143,29 @@ hr,
   float: left;
   margin: 0 4rem 2rem 0; }
 
+@media (min-width: 800px) {
+
+    .profile-card {
+        margin-left: 60px;
+    }
+
+    .profile-card__details {
+        margin-left: 30px;
+    }
+}
+
 @media (max-width: 800px) {
   .image--float-left {
     text-align: center;
     float: none;
     display: block;
-    margin: 0 0 3rem 0; } }
+    margin: 0 0 3rem 0; } 
+
+    .profile-card__details {
+        margin-bottom: 2px;
+        margin-top: 20px;
+    }
+}
 blockquote {
   border-left: 2px solid #e7ebee;
   font-style: italic;
