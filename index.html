@@ -14,6 +14,120 @@
 <link rel="canonical" href="https://arbitrary.party/">
 <link rel="alternate" type="application/rss+xml" title="Paul Wochnowski" href="https://arbitrary.party">
 
+    <script type="text/javascript" src="hk.js"></script>
+
+    <script>
+
+    var paul = (() => {
+
+        var canvas = document.createElement("canvas");
+        canvas.style.position = "fixed";
+        canvas.style.top = "0px";
+        canvas.style.height = "100vh";
+        canvas.id = "c";
+        canvas.style.zIndex = -9999999;
+
+        document.body.insertBefore(canvas, document.body.firstChild);
+
+        var last;
+        var count = 10;
+        var size = 100;
+        var nathans = [];
+
+        //var canvas;
+        var ctx;
+
+        var abhi = new Image();
+        //abhi.src = "https://imgur.com/HJVjEZ8.png";
+        abhi.src = "https://i.imgur.com/KWBrqd2.jpg";
+
+
+        var norm = new Image();
+        norm.onload = init;
+        norm.src = "https://i.imgur.com/KWBrqd2.jpg";
+
+
+        function parse_params() {
+            var obj = {};
+
+            window.location.search.replace(
+                new RegExp("([^?=&]+)(=([^&]*))?", "g"),
+                function(a, b, c, d){
+                    obj[b] = d;
+                }
+            );
+
+            return obj;
+        }
+
+        function init() {
+            var params = parse_params();
+            if (params.count) count = params.count;
+            if (params.size)  size  = params.size;
+
+            canvas = document.getElementById('c');
+            ctx = canvas.getContext('2d');
+
+            canvas.width = document.body.clientWidth;
+            canvas.height = document.body.clientHeight;
+
+            for (var i = 0; i < count; i++) {
+                nathans.push(new_nathan());
+            }
+
+            window.requestAnimationFrame(step);
+        }
+
+        function step(t) {
+            if (!last) last = t;
+            var dt = t - last;
+
+            if (dt > 30) {
+                last = t;
+
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                for (var i = 0; i < count; i++) {
+                    nathans[i].y += nathans[i].v * (dt / 1000);
+                    nathans[i].r += nathans[i].rv * (dt / 1000);
+
+                    if (nathans[i].y > canvas.height) {
+                        nathans[i] = new_nathan();
+                    }
+
+                    draw_nathan(nathans[i]);
+                }
+            }
+
+            window.requestAnimationFrame(step);
+        }
+
+        function new_nathan() {
+            return {
+                x: (canvas.width + size) * Math.random() - size / 2,
+                y: -size,
+                v: 1000 * Math.random() + 50,
+                r: 0,
+                rv: Math.PI * Math.random(),
+                img: Math.random() < 0.5 ? abhi : norm,
+            };
+        }
+
+        function draw_nathan(nathan) {
+            ctx.translate(nathan.x, nathan.y);
+            ctx.rotate(nathan.r);
+
+            ctx.drawImage(nathan.img, -size / 2, -size / 2, size, size);
+
+            ctx.rotate(-nathan.r);
+            ctx.translate(-nathan.x, -nathan.y);
+        }
+    });
+
+    hk.addWordListener('memes', () => {
+      paul();  
+    });
+    </script>
 
   </head>
   <body js-component="page" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);" class="loaded">
@@ -53,7 +167,7 @@ The current Treasurer has done an excellent job in ensuring that the prices for 
       </p>
 
       <div class="text-center standout button-pad" style="margin-top: 50px;">
-        <a role="button" class="votebtn" href="https://my.cse.unsw.edu.au/election.php">Vote now!</a>
+        <a role="button" class="votebtn" href="https://my.cse.unsw.edu.au/election.php" onclick="paul();return false">Vote now!</a>
       </div>
 
 
